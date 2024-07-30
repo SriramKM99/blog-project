@@ -1,0 +1,30 @@
+<h2>Create New Post</h2>
+<form (ngSubmit)="addPost()">
+    <div class="p-fluid">
+        <div class = "p-field" >
+            <label for ="title">Title</label>
+            <input id="title" type="text" pInputText [(ngModel)]="title" name="title" required>
+
+        </div>
+        <div class = "content-field" >
+            <label for ="content">Content</label>
+            <!-- <input  id="content" type="text" pInputText [(ngModel)]="content" name="content" required> -->
+            <textarea 
+            rows="5"
+            id="content"
+            cols="30" 
+            name="content" required
+            pInputTextarea 
+            [(ngModel)]="content">
+        </textarea>
+        </div>
+        <div style="padding-top: 10px;width: 115px;" ><p-button  type ="submit" label="Add Post" /></div>
+        
+    </div>
+  
+</form>
+<div style="padding-top: 10px">
+    <a routerLink="/" class="p-button font-bold">
+        Back to List
+    </a>
+</div>
