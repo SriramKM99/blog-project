@@ -1,0 +1,22 @@
+<h2>Blog Posts</h2>
+<p-table [value]="blogPosts"  responsiveLayout = "scroll"  >
+    <ng-template pTemplate = "header">
+        <tr>
+            <th>
+                Title
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate = "body" let-post>
+        <tr>
+            <td>
+                <a [routerLink]="['/blog',post.id]">{{post.title}}</a>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<div style="padding-top: 20px;">
+    <a routerLink="/create" class="p-button font-bold">
+        Create New Post
+    </a>
+</div>
